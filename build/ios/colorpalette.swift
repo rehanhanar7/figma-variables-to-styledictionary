@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Thu, 02 May 2024 12:52:38 GMT
+// Generated on Mon, 19 Aug 2024 08:25:46 GMT
 
 
 import UIKit
@@ -72,7 +72,7 @@ public class colorPalette {
     public static let colorGray100 = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
     public static let colorWhite100 = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1)
     public static let colorBlack200 = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1)
-    public static let colorBlack100 = UIColor(red: 1.000, green: 0.000, blue: 0.839, alpha: 1)
+    public static let colorBlack100 = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1)
     public static let iconIconOnBrand = colorWhite100
     public static let iconIconContrast = colorWhite100
     public static let iconIconCritical = colorRed900
