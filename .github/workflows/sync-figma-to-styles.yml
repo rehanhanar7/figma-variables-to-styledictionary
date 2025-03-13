@@ -10,9 +10,7 @@ jobs:
   sync-figma-to-tokens:
     runs-on: ubuntu-latest
     permissions:
-      # Need to be able to create new branches and commits
       contents: write
-      pull-requests: write
     steps:
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -46,10 +44,10 @@ jobs:
       - name: Build Style Dictionary (uses config.json to define src/dest)
         run: npm run build
         
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          commit-message: Update tokens from Figma
-          title: Update tokens from Figma
-          body: 'Update tokens from Figma from file: https://www.figma.com/file/${{ github.event.inputs.file_key }}'
-          branch: update-tokens
+      - name: Commit changes
+        run: |
+          git config --local user.email "rehanhanar7@gmail.com"
+          git config --local user.name "Rehan Office"
+          git add tokens/ build/
+          git commit -m "Update tokens and styles from Figma variables" || echo "No changes to commit"
+          git push origin main
